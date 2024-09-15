@@ -13,13 +13,13 @@ interface Props {
 
 function GameGrid({ gameQuery }: Props) {
   const { data, error, isLoading } = useGames(gameQuery);
-  const skeletons = [1, 2, 3, 4, 5, 6];
+  const skeletons = [1, 2, 3, 4];
 
   return (
     <>
       {error && <Text>{error}</Text>}
       <SimpleGrid
-        spacing={3}
+        spacing={6}
         columns={{ sm: 1, md: 2, lg: 3, xl: 5 }}
         padding="10px"
       >
